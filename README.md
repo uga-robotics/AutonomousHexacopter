@@ -6,3 +6,8 @@ If you would like to use this repository in a catkin/colcon workspace, simply cl
 ```
 git clone {https/ssh ref} src/AutonomousHexacopter
 ```
+Also, remember to setup the submodule repositories by using these two commands in the /AutonomousHexacopter directory
+```
+git submodule init
+git submodule update
+```
