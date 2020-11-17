@@ -53,15 +53,6 @@ ros2 launch px4_ros_com sensor_combined_listener.launch.py
 ```
 You should see some nominal data coming fom the `sensor_combined` uORB topic on the PX4!
 
-## Cleaning Up Before Committing Changes
-
-***Before commiting any changes to this repository, please do the following!!!!***
-
-To clean up the repo for commits, please make sure to delete the `PX4-Autopilot/build` directory. It contains system-specific files generated when starting the SITL Gazebo simulation, and should be deleted! To do this, navigate to the `PX4-Autopilot` directory and execute the following command:
-```
-sudo rm -r build/
-```
-
 ## Working with Git and Git Submodules
 **NOTE:** If you have made changes to any of the submodules (PX4-Autopilot, PX4-msgs, px4_ros_com, etc.), make sure to navigate into their respective directories and push those changes **BEFORE** attempting to push changes in the main repository.
 
