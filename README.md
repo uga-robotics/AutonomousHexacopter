@@ -55,3 +55,10 @@ To clean up the repo for commits, please make sure to delete the `PX4-Autopilot/
 ```
 sudo rm -r build/
 ```
+
+## Working with Git and Git Submodules
+**NOTE:** If you have made changes to any of the submodules (PX4-Autopilot, PX4-msgs, px4_ros_com, etc.), make sure to navigate into their respective directories and push those changes **BEFORE** attempting to push changes in the main repository.
+
+More information on using/working with Git can be found [here](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+And more information on working with Git Submodules specifically can be found [here](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
