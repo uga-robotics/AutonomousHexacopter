@@ -1,6 +1,8 @@
 # AutonomousHexacopter
 any and all ROS/ROS2 Packages used in the development of an Autonomous Hexacopter, with the aim of achieving basic autonomous capabilities along with autonomous battery swapping
 
+**NOTE:** This repo is mean't for use with ROS2 Foxy on Ubuntu 20.04 LTS. Make sure you have these installed correctly by following [this](https://github.com/uga-robotics/ROS2-training/blob/master/instructions/introduction.md) guide before continuing with this one!
+
 ## Cloning/Importing Into a New Workspace
 If you would like to use this repository in a catkin/colcon workspace, simply clone it into the src/ directory from the workspace root:
 ```
