@@ -1,5 +1,5 @@
 # AutonomousHexacopter
-any and all ROS/ROS2 Packages used in the development of an Autonomous Hexacopter, with the aim of achieving basic autonomous capabilities along with autonomous battery swapping
+any and all software packages used in the development of an Autonomous Hexacopter, with the aim of achieving basic autonomous capabilities along with autonomous battery swapping, facilitated by the PX4-Autopilot FMU firmware, ROS2, and their dependancies.
 
 **NOTE:** This repo is mean't for use with ROS2 Foxy on Ubuntu 20.04 LTS. Make sure you have these installed correctly by following [this](https://github.com/uga-robotics/ROS2-training/blob/master/instructions/introduction.md) guide before continuing with this one!
 
