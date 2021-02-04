@@ -33,7 +33,7 @@ colcon build --symlink-install --packages-skip px4 --event-handlers console_dire
 ```
 
 ## Running the Stock SITL Gazebo Simulation and Connecting it to ROS2
-Before running Gazebo, the Ignition rendering API must be installed, which won't install unless sourced directly. To install, execute the following commands in order:
+Before running Gazebo, the Ignition rendering API must be installed, which must be sourced directly. To install, execute the following commands in order:
 ```
 sudo apt -y install wget lsb-release gnupg
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
