@@ -9,6 +9,23 @@ If you would like to use this repository in a catkin/colcon workspace, simply cl
 git clone --recurse-submodules git@github.com:uga-robotics/AutonomousHexacopter.git src/AutonomousHexacopter
 ```
 
+For development purposes, you'll need to checkout our development branches to track changes to any of the submodules (PX4-Autopilot, px4_ros_com). For the `PX4-Autopilot` submodule, navigate into the `PX4-Autopilot` directory and execute:
+```
+git checkout 1.11.3-dev
+```
+
+For the `px4_ros_com` submodule, navigate to the `px4_ros_com` directory and execute:
+```
+git checkout master
+```
+
+For the `px4_msgs` submodule, navigate to the `px4_msgs` directory and execute:
+```
+git checkout master
+```
+
+We'll  be tracking changes to `px4_ros_com` on our fork's master, as we'll need to keep it as up to date as possible with the upstream source, and we'll likely only be changing the `uorb_rtps_message_ids.yaml` file anyways (generated from the python script in the PX4-Autopilot repo).
+
 ## Installing Dependancies and Setup
 Once you clone the repository, navigate to the `scripts` directory and run the `install_deps.sh` script like so:
 ```
