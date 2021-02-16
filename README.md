@@ -6,18 +6,8 @@ any and all software packages used in the development of an Autonomous Hexacopte
 ## Cloning/Importing Into a New Workspace
 If you would like to use this repository in a catkin/colcon workspace, simply clone it into the src/ directory from the workspace root:
 ```
-git clone {https/ssh ref} src/AutonomousHexacopter
+git clone --recurse-submodules git@github.com:uga-robotics/AutonomousHexacopter.git src/AutonomousHexacopter
 ```
-Also, remember to setup the submodule repositories by using this two command in the /AutonomousHexacopter directory
-```
-git submodule update --init --recursive
-```
-Then, make sure to checkout the `fork_master` branch for the `PX4-Autopilot` submodule so you can record changes to it:
-```
-cd PX4-Autopilot
-git checkout fork_master
-```
-Repeat this for any submodule you with to make changes to.
 
 ## Installing Dependancies and Setup
 Once you clone the repository, navigate to the `scripts` directory and run the `install_deps.sh` script like so:
