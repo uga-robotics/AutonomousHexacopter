@@ -19,11 +19,6 @@ For the `px4_ros_com` submodule, navigate to the `px4_ros_com` directory and exe
 git checkout master
 ```
 
-For the `px4_msgs` submodule, navigate to the `px4_msgs` directory and execute:
-```
-git checkout master
-```
-
 We'll  be tracking changes to `px4_ros_com` on our fork's master, as we'll need to keep it as up to date as possible with the upstream source, and we'll likely only be changing the `uorb_rtps_message_ids.yaml` file anyways (generated from the python script in the PX4-Autopilot repo).
 
 ## Installing Dependancies and Setup
