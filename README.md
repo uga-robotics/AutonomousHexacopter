@@ -16,7 +16,7 @@ git checkout uga-dev
 
 For the `PX4-Msgs` submodule, navigate to the `PX4-Msgs` directory and execute:
 ```
-git checkout 8246888ab48e1dfd337c5080addf09650b5b116d
+git checkout a635d9d827ac36a51411e03b9b8eb25a599dc734
 ```
 
 For the `px4_ros_com` submodule, navigate to the `px4_ros_com` directory and execute:

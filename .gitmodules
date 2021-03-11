@@ -1,3 +1,9 @@
 [submodule "px4_ros_com"]
 	path = px4_ros_com
 	url = git@github.com:uga-robotics/px4_ros_com.git
+[submodule "PX4-Autopilot"]
+	path = PX4-Autopilot
+	url = https://github.com/uga-robotics/PX4-Autopilot.git
+[submodule "px4_msgs"]
+	path = px4_msgs
+	url = https://github.com/PX4/px4_msgs.git
