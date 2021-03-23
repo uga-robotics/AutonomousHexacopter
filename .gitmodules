@@ -9,4 +9,4 @@
 	url = https://github.com/PX4/px4_msgs.git
 [submodule "hexacopter-env"]
 	path = hexacopter-env
-	url = ./hexacopter-env
+	url = git@github.com:uga-robotics/hexacopter-env.git
