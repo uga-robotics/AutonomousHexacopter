@@ -61,4 +61,4 @@ sudo apt -y install wget lsb-release gnupg
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 sudo apt update
-sudo apt install libignition-rendering3-dev
+sudo apt -y install libignition-rendering3-dev
