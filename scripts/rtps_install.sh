@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir /home/ubuntu/usr/local
+mkdir -p /home/ubuntu/usr/local
 git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.0 ~/FastDDS-2.0.0
 cd ~/FastDDS-2.0.0
 mkdir build && cd build
