@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-sudo apt install -y cmake g++ python3-pip wget git libasio-dev libtinyxml2-dev libssl-dev openjdk-11-jre
-sudo pip3 install -U colcon-common-extensions vcstool
-sudo mkdir ~/Fast-DDS
-cd ~/Fast-DDS
-sudo wget https://raw.githubusercontent.com/eProsima/Fast-DDS/master/fastrtps.repos
-sudo mkdir src
-sudo vcs import src < fastrtps.repos
-sudo colcon build
-cd ~
-sudo git clone --recursive https://github.com/eProsima/Fast-DDS-Gen.git
-cd ~/Fast-DDS-Gen
-sudo ./gradlew assemble
+mkdir /home/ubuntu/usr/local
+git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.0 ~/FastDDS-2.0.0
+cd ~/FastDDS-2.0.0
+mkdir build && cd build
+cmake -DTHIRDPARTY=ON -DSECURITY=ON -DCMAKE_INSTALL_PREFIX=/home/ubuntu/usr/local ..
+make -j$(nproc --all)
+sudo make install
+git clone --recursive https://github.com/eProsima/Fast-DDS-Gen.git -b v1.0.4 ~/Fast-RTPS-Gen \
+    && cd ~/Fast-RTPS-Gen \
+    && ./gradlew assemble \
+    && sudo ./gradlew -p /home/ubuntu/usr/local install
+export FASTRTPSGEN_DIR=/home/ubuntu/usr/local
