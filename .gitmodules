@@ -7,6 +7,3 @@
 [submodule "px4_msgs"]
 	path = px4_msgs
 	url = https://github.com/PX4/px4_msgs.git
-[submodule "hexacopter-env"]
-	path = hexacopter-env
-	url = git@github.com:uga-robotics/hexacopter-env.git
