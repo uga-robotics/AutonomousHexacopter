@@ -1,7 +1,7 @@
 # AutonomousHexacopter
 any and all software packages used in the development of an Autonomous Hexacopter, with the aim of achieving basic autonomous capabilities along with autonomous battery swapping, facilitated by the PX4-Autopilot FMU firmware, ROS2, and their dependancies.
 
-**NOTE:** This repo is mean't for use with ROS2 Foxy on Ubuntu 20.04 LTS. Make sure you have these installed correctly by following [this](https://github.com/uga-robotics/ROS2-training/blob/master/instructions/introduction.md) guide before continuing with this one!
+**NOTE:** This repo is mean't for use with ROS2 Foxy on Ubuntu 20.04 LTS. Make sure you have these installed correctly by following [this](https://github.com/uga-robotics/ROS2-training/blob/master/instructions/introduction.md) guide before continuing with this one! You can also use this repository with our new development Docker container, `hexacopter-env`, with [setup instructions for Docker and it (on all platforms) here](https://github.com/uga-robotics/hexacopter-env).
 
 ## Cloning/Importing Into a New Workspace
 If you would like to use this repository in a catkin/colcon workspace, simply clone it into the src/ directory from the workspace root:
@@ -24,9 +24,17 @@ For the `px4_ros_com` submodule, navigate to the `px4_ros_com` directory and exe
 git checkout uga-dev
 ```
 
-We'll  be tracking changes to `px4_ros_com` on our fork's `uga-dev`, as we'll need to keep it as up to date as possible with the `PX4-Autopilot` submodule, and we'll likely only be changing the `uorb_rtps_message_ids.yaml` file anyways (generated from the python script in the PX4-Autopilot repo).
+We'll  be tracking changes to `px4_ros_com` and `PX4-Autopilot` on our fork's `uga-dev` branch, which will act as our master/main branch for the project, we'll likely only be changing the `uorb_rtps_message_ids.yaml` file (generated from the python script in the PX4-Autopilot repo).
 
 ## Installing Dependancies and Setup
+
+There are two ways, to setup a working environment for the project: Using our [Docker Container](https://github.com/uga-robotics/hexacopter-env) or using a native Linux installation. Either method will work as long as you follow the instructions carefully.
+
+### With Docker
+
+When using the [Docker Container](https://github.com/uga-robotics/hexacopter-env) all of the dependancies and setup are done for you. You just need to clone this repository to your machine (or in WSL) and hand the launch script a path to the workspace to get started.
+
+### On A Native, ROS2 Foxy Linux Installation
 Once you clone the repository, navigate to the `scripts` directory and run the `install_deps.sh` script like so:
 ```
 sudo ./install_deps.sh
@@ -40,14 +48,7 @@ colcon build --symlink-install --packages-skip px4 --event-handlers console_dire
 ```
 
 ## Running the Stock SITL Gazebo Simulation and Connecting it to ROS2
-Before running Gazebo, the Ignition rendering API must be installed, which must be sourced directly. To install, execute the following commands in order:
-```
-sudo apt -y install wget lsb-release gnupg
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
-wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
-sudo apt update
-sudo apt install libignition-rendering3-dev
-```
+
 To run the stock Software In The Loop (SITL) Gazebo simulation, with an example quadcopter, navigate to the `PX4-Autopilot` directory and execute the command:
 ```
 make px4_sitl_rtps gazebo
