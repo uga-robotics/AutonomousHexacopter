@@ -39,7 +39,13 @@ Once you clone the repository, navigate to the `scripts` directory and run the `
 ```
 sudo ./install_deps.sh
 ```
-After that, please follow the instructions found [here to install FastRTPS and FastRTPSGen via Linux Binaries](https://fast-dds.docs.eprosima.com/en/latest/installation/binaries/binaries_linux.html) or [here to install them via Sources](https://fast-dds.docs.eprosima.com/en/latest/installation/binaries/binaries_linux.html). Although the binaries are available, we recommend to build and install the code from source, given that the binaries may not come with required components and dependencies in place. Note that this step is critically important, as FastRTPS and FastRTPSGen allow the PX4 to communicate with ROS2.
+
+After that, install FastRTPS and FastRTPSGen by either navigating to the `scripts` directory and running `rtps_install.sh` like so:
+```
+sudo ./rtps_install.sh
+```
+
+or by following the [instructions found here to install FastRTPS and FastRTPSGen via Linux Binaries](https://fast-dds.docs.eprosima.com/en/latest/installation/binaries/binaries_linux.html) or [here to install them via Sources](https://fast-dds.docs.eprosima.com/en/latest/installation/binaries/binaries_linux.html). Although the binaries are available, we recommend to build and install the code from source, given that the binaries may not come with required components and dependencies in place. Note that this step is critically important, as FastRTPS and FastRTPSGen allow the Pixhawk 4 to communicate with ROS2.
 
 ## Building the Workspace
 After making sure the git submodules are properly initialized and updated (the directories are not empty) and installing the required dependancies, you should be able to build the ROS2 workspace with `colcon` as shown below. Navigate to the root of the workspace (above `src`) and execute the following command, making sure ROS2 is sourced:
